@@ -90,9 +90,6 @@ Enter your choice: `, (choice) => {
     });//} //dont forget to un-comment me
   });
 });
-<<<<<<< HEAD
-=======
 });
 
->>>>>>> 4828f08e7fa30d8083b49e5c2f9b58764b54d923
 module.exports = calc;
