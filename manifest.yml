@@ -15,10 +15,10 @@
 #
 ---
 applications:
-- name: mycalculatorw
+- name: sample-calculator_chain
   memory: 512MB
   instances: 1
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
-  host: mycalculatorw
-  name: mycalculatorw
+  host: sample-calculator_chain
+  name: sample-calculator_chain
   domain: eu-gb.mybluemix.net
