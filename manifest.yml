@@ -21,4 +21,4 @@ applications:
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   host: calculator1408
   name: calculator1408
-  domain: eu-gb.bluemix.net
+  domain: eu-gb.mybluemix.net
