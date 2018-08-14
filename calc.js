@@ -1,33 +1,15 @@
 const operations = require('./operations.js');
 const readline = require('readline');
-var express = require('express');
 
+var express = require('express');
 var  routes = require('./routes.js');
 var calc = express();
+var http = require('http');
 
 calc.use('/', routes);
 
-var http = require('http');
-
-var listener = calc.listen(8080, function(){
+var listener = calc.listen(process.env.port, function(){
     console.log('Listening on port ' + listener.address().port); //Listening on port 8080
-});
-
-
-
-var express = require('express');
-
-var  routes = require('./routes.js');
-var calc = express();
-
-calc.use('/', routes);
-
-var http = require('http');
-
-var listener = calc.listen(8080, function(){
-    console.log('Listening on port ' + listener.address().port); //Listening on port 8080
-  
-  
 
 // Use readline to create command line interface
 const rl = readline.createInterface({
@@ -38,10 +20,8 @@ const rl = readline.createInterface({
 //welcome screen
 console.log(`
 Calc.js
-
 Welcome to the Node.js Calculator app!
 Version: 1.0.0.
-
 Usage: The user will be prompted for two numbers,
 then asked to select their operation of choice.
 `);
@@ -56,12 +36,10 @@ rl.question('Enter the first number: ', (x) => {
     // else{
     rl.question(`
 Please select from the following options:
-
 [1] Addition (+)
 [2] Subtraction (-)
 [3] Multiplication (*)
 [4] Division (/)
-
 Enter your choice: `, (choice) => {
   //validate that only numbers are being entered
   //though we can remove that if we put buttons in the front end later
@@ -93,4 +71,3 @@ Enter your choice: `, (choice) => {
 });
 
 module.exports = calc;
-
