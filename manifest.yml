@@ -15,10 +15,10 @@
 #
 ---
 applications:
-- name: Calculatorapp1408
+- #name: Calculatorapp1408
   memory: 512MB
   instances: 1
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
-  host: Calculatorapp1408
-  name: Calculatorapp1408
+  #host: Calculatorapp1408
+  #name: Calculatorapp1408
   domain: eu-gb.mybluemix.net
